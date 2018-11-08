@@ -18,7 +18,7 @@ public class SimplefactoryApplicationTests {
     /**
      * @author:shuyu.wang
      * @description:简单工厂模式
-     * @date: 2018/11/7 14:20
+     * @date: 2018/11/7 14:42
      * @param: 
     */
 	@Test
