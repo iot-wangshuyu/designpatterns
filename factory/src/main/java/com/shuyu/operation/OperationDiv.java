@@ -7,19 +7,19 @@ package com.shuyu.operation;
  * @date 2018-11-07 13:42
  **/
 
-public class OperationDiv extends Operation {
+public class OperationDiv implements Operation {
 
     @Override
-    public double getResult() {
+    public double getResult(double numberA,double numberB) {
         double result=0;
-        if (getNumberB()==0){
+        if (numberB==0){
             try {
                 throw new Exception("除数不能为0");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }else {
-            result=getNumberA()/getNumberB();
+            result=numberA/numberB;
         }
         return result;
     }

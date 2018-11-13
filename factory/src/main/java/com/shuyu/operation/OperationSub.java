@@ -7,11 +7,11 @@ package com.shuyu.operation;
  * @date 2018-11-07 13:35
  **/
 
-public class OperationSub extends Operation {
+public class OperationSub implements Operation {
     @Override
-    public double getResult() {
+    public double getResult(double numberA,double numberB) {
         double result=0;
-        result=getNumberA()-getNumberB();
+        result=numberA-numberB;
         return result;
     }
 }
