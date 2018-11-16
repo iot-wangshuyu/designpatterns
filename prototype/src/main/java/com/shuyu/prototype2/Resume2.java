@@ -1,22 +1,23 @@
-package com.shuyu.prototype;
+package com.shuyu.prototype2;
 
+import com.shuyu.prototype.WorkExperience;
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Shuyu.Wang
  * @package:com.shuyu.prototype
- * @description:原型类,实现Cloneable，重写clone(),实现浅复制
+ * @description:原型类,实现Cloneable，重写clone(),实现深复制
  * @date 2018-11-16 23:05
  **/
 @Slf4j
-public class Resume implements Cloneable{
+public class Resume2 implements Cloneable{
     private String name;
     private String sex;
     private String age;
-    private WorkExperience workExperience;
-    public Resume(String name){
+    private WorkExperience2 workExperience;
+    public Resume2(String name){
         this.name=name;
-        workExperience=new WorkExperience();
+        workExperience=new WorkExperience2();
     }
 
     public void setPersonInfo(String sex,String age){
@@ -36,9 +37,10 @@ public class Resume implements Cloneable{
 
     @Override
     public Object clone() {
-        Object clone = null;
+        Resume2 clone = null;
         try {
-            clone = super.clone();
+            clone = (Resume2)super.clone();
+            clone.workExperience=(WorkExperience2) workExperience.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
