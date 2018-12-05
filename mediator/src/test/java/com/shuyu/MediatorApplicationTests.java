@@ -11,6 +11,12 @@ public class MediatorApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+		User robert = new User("Robert");
+		User john = new User("John");
+
+		robert.sendMessage("Hi! John!");
+		john.sendMessage("Hello! Robert!");
 	}
 
 }
